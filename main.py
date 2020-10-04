@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def main():
-    n = args.size
+    n = args.n
     logger.info('ngon(%d)', n)
 
     # generate metallic mean
