@@ -30,6 +30,9 @@ class Vector2(object):
     def __hash__(self):
         return hash((getkey(self.x), getkey(self.y)))
 
+    def __eq__(self, other):
+        return self.__hash__() == other.__hash__()
+
     def cross(self, other):
         return self.x*other.y - self.y*other.x
 
