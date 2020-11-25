@@ -31,7 +31,7 @@ class Vector2(object):
         return hash((getkey(self.x), getkey(self.y)))
 
     def __eq__(self, other):
-        return self.__hash__() == other.__hash__()
+        return mp.almosteq(self.x, other.x) and mp.almosteq(self.y, other.y)
 
     def cross(self, other):
         return self.x*other.y - self.y*other.x
